@@ -5,7 +5,7 @@ requests
 pandas
 matplotlib
 Scrapy
-scapy
+scapy>=2.4.1
 beautifulsoup4
 aniso8601
 certifi
@@ -20,9 +20,9 @@ jsonschema
 MarkupSafe
 Naked
 olefile
-Pillow
+Pillow>=6.2.2
 pytz
-PyYAML
+PyYAML>=4.2b1
 shellescape
 six
 flask-restplus
