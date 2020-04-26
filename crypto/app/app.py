@@ -1,12 +1,14 @@
 #!/usr/bin/env python
 #  -*- coding: utf-8 -*-
 import argparse
+import os
 from http import HTTPStatus
 
 import misaka as m
 from flask import Flask
 from flask_cors import CORS
 from flask_restplus import Api, Resource, abort, apidoc, fields
+from waitress import serve
 
 from ivonet.crypto.baudot_code import text_2_baudot, baudot_2_text
 from ivonet.crypto.bifid import bifid_encrypt, bifid_decrypt
@@ -226,7 +228,12 @@ class SmsDecrypt(Resource):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("python3 app.py")
-    parser.add_argument('--host', required=False, default="127.0.0.1", help="Set host to run on e.g. 0.0.0.0")
-    parser.add_argument('--debug', action="store_true", help="Enable debug mode")
+    parser.add_argument('-b', '--bind', required=False, default="127.0.0.1",
+                        help="IP to bind to e.g. 0.0.0.0. (default 127.0.0.1)")
+    parser.add_argument('-p', '--port', required=False, default="5000",
+                        help="Port to run on. (default 5000)")
     args = parser.parse_args()
-    app.run(host=args.host, debug=args.debug)
+    if os.environ["DEBUG"] == "1":
+        app.run(host=args.bind, debug=True)
+    else:
+        serve(app, host=args.bind, port=args.port)

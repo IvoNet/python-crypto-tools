@@ -2,3 +2,4 @@ werkzeug==0.16.1
 flask-restplus
 flask-cors
 misaka
+waitress

@@ -28,3 +28,4 @@ six
 flask-restplus
 flask-cors
 misaka
+waitress
