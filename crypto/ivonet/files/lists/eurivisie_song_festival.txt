@@ -1,0 +1,27 @@
+Plaats	Land	Taal	Artiest	Lied	Punten
+1	Portugal	Portugees	Salvador Sobral	Amar pelos dois	758
+2	Bulgarije	Engels	Kristian Kostov	Beautiful mess	615
+3	Moldavië	Engels	SunStroke Project	Hey, mamma!	374
+4	België	Engels	Blanche	City lights	363
+5	Zweden	Engels	Robin Bengtsson	I can't go on	344
+6	Italië	Italiaans	Francesco Gabbani	Occidentali's karma	334
+7	Roemenië	Engels	Ilinca feat. Alex Florea	Yodel it!	282
+8	Hongarije	Hongaars	Joci Pápai	Origo	200
+9	Australië	Engels	Isaiah Firebrace	Don't come easy	173
+10	Noorwegen	Engels	JOWST feat. Aleksander Walmann	Grab the moment	158
+11	Nederland	Engels	O'G3NE	Lights and shadows	150
+12	Frankrijk	Frans en Engels	Alma	Requiem	135
+13	Kroatië	Engels en Italiaans	Jacques Houdek	My friend	128
+14	Azerbeidzjan	Engels	Dihaj	Skeletons	120
+15	Koninkrijk Verenigd Koninkrijk	Engels	Lucie Jones	Never give up on you	111
+16	Oostenrijk	Engels	Nathan Trent	Running on air	93
+17	Wit-Rusland	Wit-Russisch	Navi	Historyja majho žyccia	83
+18	Armenië	Engels	Artsvik	Fly with me	79
+19	Griekenland	Engels	Demy	This is love	77
+20	Denemarken	Engels	Anja Nissen	Where I am	77
+21	Cyprus	Engels	Hovig	Gravity	68
+22	Polen	Engels	Kasia Moś	Flashlight	64
+23	Israël	Engels	Imri Ziv	I feel alive	39
+24	Oekraïne	Engels	O.Torvald	Time	36
+25	Duitsland	Engels	Levina	Perfect life	6
+26	Spanje	Engels en Spaans	Manel Navarro	Do it for your lover	5

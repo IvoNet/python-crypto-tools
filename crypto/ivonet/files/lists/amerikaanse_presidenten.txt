@@ -1,0 +1,46 @@
+Volgorde	Naam	Periode	Partij
+1	George Washington	1789-1797	Federalist
+2	John Adams	1797-1801	Federalist
+3	Thomas Jefferson	1801-1809	Democratisch-Republikeins
+4	James Madison	1809-1817	Democratisch-Republikeins
+5	James Monroe	1817-1825	Democratisch-Republikeins
+6	John Quincy Adams	1825-1829	Democratisch-Republikeins
+7	Andrew Jackson	1829-1837	Democratisch
+8	Martin Van Buren	1837-1841	Democratisch
+9	William Henry Harrison	1841-1841	Whig
+10	John Tyler	1841-1845	Whig
+11	James K Polk	1845-1849	Democratisch
+12	Zachary Taylor	1849-1850	Whig
+13	Millard Fillmore	1850-1853	Whig
+14	Franklin Pierce	1853-1857	Democratisch
+15	James Buchanan	1857-1861	Democratisch
+16	Abraham Lincoln	1861-1865	Republikeins
+17	Andrew Johnson	1865-1869	Republikeins
+18	Ulysses S Grant	1869-1877	Republikeins
+19	Rutherford B Hayes	1877-1881	Republikeins
+20	James Garfield	1881-1881	Republikeins
+21	Chester A Arthur	1881-1885	Republikeins
+22	Grover Cleveland	1885-1889	Democratisch
+23	Benjamin Harrison	1889-1893	Republikeins
+24	Grover Cleveland	1893-1897	Democratisch
+25	William McKinley	1897-1901	Republikeins
+26	Theodore Roosevelt	1901-1909	Republikeins
+27	William Howard Taft	1909-1913	Republikeins
+28	Woodrow Wilson	1913-1921	Democratisch
+29	Warren G Harding	1921-1923	Republikeins
+30	Calvin Coolidge	1923-1929	Republikeins
+31	Herbert Hoover	1929-1933	Republikeins
+32	Franklin D Roosevelt	1933-1945	Democratisch
+33	Harry S Truman	1945-1953	Democratisch
+34	Dwight D Eisenhower	1953-1961	Republikeins
+35	John F Kennedy	1961-1963	Democratisch
+36	Lyndon B Johnson	1963-1969	Democratisch
+37	Richard M Nixon	1969-1974	Republikeins
+38	Gerald R Ford	1974-1977	Republikeins
+39	James (Jimmy) Carter	1977-1981	Democratisch
+40	Ronald Reagan	1981-1989	Republikeins
+41	George H W Bush	1989-1993	Republikeins
+42	William J (Bill) Clinton	1993-2001	Democratisch
+43	George W Bush	2001-2009	Republikeins
+44	Barack Obama	2009-2017	Democratisch
+45	Donald J. Trump	2017-heden	Republikeins
