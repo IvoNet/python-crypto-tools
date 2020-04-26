@@ -79,7 +79,7 @@ class Rot(Resource):
 
 
 @ns.route('/dutch/word')
-class Rot(Resource):
+class DutchWord(Resource):
 
     def __init__(self, api=None, *args, **kwargs):
         super().__init__(api, *args, **kwargs)
