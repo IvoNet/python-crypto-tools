@@ -39,3 +39,15 @@ Follow the instructions given by `make`.
 ```bash
 docker run -d --rm -p 5000:5000 ivonet/crypto
 ```
+
+or run:
+
+```bash
+build-run.sh
+```
+every time you want to rebuild just press ctrl-c once and twice to quit
+
+# Swagger
+
+You can see all the endpoints by running the application and going to 
+the [swagger](http://localhost:5000) page.
