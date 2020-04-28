@@ -10,7 +10,6 @@ But it also demonstrates many of the old cryptographic formulae.
 * Docker
 * Python 3.8+
 
-
 # Build
 
 `make` is used to build the docker images. 
@@ -20,11 +19,15 @@ to get help on how to use the build system just type `make` without any paramete
 
 ## Crypto base image
 
+This image only needs to be build if it is not yet there or if you added a new requirement (dependency)
+
 ```bash
 make crypto-base
 ```
 
 ## Crypto main image
+
+Contains the crypto tools
 
 ```bash
 make crypto
@@ -46,6 +49,15 @@ or run:
 build-run.sh
 ```
 every time you want to rebuild just press ctrl-c once and twice to quit
+
+## Without docker
+
+Be sure to install the `crypto-base/requirements.txt` in your environment and all should work fine.
+
+```bash
+pip3 install -r ./crypto-base/requirements.txt
+```
+
 
 # Swagger
 
