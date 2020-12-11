@@ -5,10 +5,11 @@ import os
 from http import HTTPStatus
 
 import misaka as m
-from flask import Flask
+from flask import Flask, url_for
 from flask_cors import CORS
 from flask_restplus import Api, Resource, abort, apidoc, fields
 from waitress import serve
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 from ivonet.crypto.baudot_code import text_2_baudot, baudot_2_text
 from ivonet.crypto.bifid import bifid_encrypt, bifid_decrypt
@@ -20,6 +21,7 @@ from ivonet.woorden import Woordenboek
 
 app = Flask(__name__)
 CORS(app)
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 api = Api(app, version='1.0', title='ivonet-crypto',
           description='API for the ivonet crypto package')
@@ -34,6 +36,13 @@ keyvalue = api.model('KeyValue', {
 value = api.model('Value', {
     'value': fields.String(readOnly=True, description='The required kind of text'),
 })
+
+if os.environ.get('PROD') == "1":
+    @property
+    def specs_url(self):
+        return url_for(self.endpoint('specs'), _external=True, _scheme='https')
+
+    Api.specs_url = specs_url
 
 app.register_blueprint(apidoc.apidoc)
 

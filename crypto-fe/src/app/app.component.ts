@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {ServicesResult} from "./app.model";
 import {Observable} from "rxjs";
 
 @Component({
@@ -9,24 +10,23 @@ import {Observable} from "rxjs";
 })
 export class AppComponent implements OnInit {
 
-  services: Observable<string>;
+  public services: Observable<ServicesResult>;
 
-  constructor(private http: HttpClient) {}
-
-
-  public getServices() {
-    this.services = this.http.get<string>("http://localhost:5000/crypto/services", {
-      observe: 'body',
-      responseType: 'json'
-    }).pipe(source => this.services = source);
-    // this.http.get<string>("http://localhost:5000/crypto/services", {
-    //   observe: 'response',
-    //   responseType: 'json'
-    // }).toPromise()
-    //   .then(value => this.services = value);
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
-    this.getServices();
+    this.services = this.getServices();
   }
+
+  public getServices(): Observable<ServicesResult> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+    return this.http.get<ServicesResult>("http://localhost:5000/crypto/services", httpOptions)
+
+  }
+
 }

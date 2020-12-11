@@ -1,4 +1,12 @@
 hello word:
 
 
-<div ng-bind-html="services"></div>
+<div *ngIf="services !== undefined" >
+  <ul *ngFor="let service of services.result ">
+    <li>
+      <h1>{{ service.endpoint }}</h1>
+      <div [innerHTML]="service.description"></div>
+    </li>
+  </ul>
+</div>
+<!--<div [innerHTML]="services"></div>-->

@@ -3,7 +3,7 @@ FROM ivonet/crypto-base:latest
 ENV DEBUG=0
 
 COPY app /opt/app
-COPY ivonet /usr/local/lib/python3.8/site-packages/ivonet
+COPY ivonet /usr/local/lib/python3.9/site-packages/ivonet
 
 WORKDIR /opt/app
 
