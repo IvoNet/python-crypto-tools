@@ -1,4 +1,4 @@
-FROM python:3.9.1-buster
+FROM python:3.9.10-buster
 
 COPY requirements.txt /opt/requirements.txt
 
