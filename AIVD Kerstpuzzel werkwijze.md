@@ -1,0 +1,67 @@
+# AIVD Kerstpuzzel
+
+- let op het nieuws van het afgelopen jaar
+    - corona
+    - verkiezingen USA
+    - Wie is de Mol 20 jaar
+    - etc
+- zie je een patroon?
+    - alfabetische volgorde van woorden
+    - hoeveel woorden
+    - anagram
+    - 
+
+
+# Handvatten
+
+- Sterrenbeelden
+- Chinese dierenriem  
+- Dagen van de week / maand / jaar
+- Base encoding van letters
+  - hexadecimaal
+    - substitueer cijfers met "overeenkomstige" letters
+  - octair
+  - base 3
+  - ...
+- Morse
+- Jaargetijden
+- Anagram
+- Fibonacci
+- Top2000
+  - ook van vorige jaren
+- Shakespeare
+- Plaatsnamen / Provincies
+- Werelddelen
+- Taal
+  - eerste letter / laatste letter
+  - letters op alfabetische volgorde
+  - omgekeerd alfabetisch
+- Woordcombinaties
+- Woord prefix / suffix om nieuw woord te krijgen.
+  - of een gemeenschappelijk thema
+- Denk als crypto voor sleutels (letterlijk nemen)
+- Kleuren
+- Cypher codering
+  - Substitutie met lengte van code als sleutel?
+  - quotes van bekende mensen met de mens als key
+- Nieuws zaken
+- Spelletjes
+  - Eerste letters uit figuren van
+  - nummering uit andere talen
+  - monopoly
+  - scrabble
+  - ganzenborden
+- Mythologie
+  - Grieks
+- Fibonacci
+- Priemgetallen
+- beroemde detectives
+- https://www.dcode.fr/en
+- Tabel van elementen
+  - edelgassen
+  - edelmetalen
+  - afkortingen
+  - ...
+- NOORD, OOST, ZUID, WEST
+- WINTER, LENTE, ZOMER, HERFST
+- 

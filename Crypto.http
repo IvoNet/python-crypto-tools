@@ -1,0 +1,77 @@
+# curl -X POST "https://crypto.ivo2u.org/crypto/sms/encrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"fietsen en wandelen\"}"
+POST https://crypto.ivo2u.org/crypto/sms/encrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "fietsen en wandelen"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/sms/decrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"3438736 36 92633536\"}"
+POST https://crypto.ivo2u.org/crypto/sms/decrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "3438736 36 92633536"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/rot" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"KKTJGMFUTJKXBXOKTJKTOYGRYKKTVUZFUTJKXKKTKTQKRJXAVVKRZPKNUTOTM\"}"
+POST https://crypto.ivo2u.org/crypto/rot
+accept: application/json
+Content-Type: application/json
+
+{ "value": "KKTJGMFUTJKXBXOKTJKTOYGRYKKTVUZFUTJKXKKTKTQKRJXAVVKRZPKNUTOTM"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/bifid/encrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"key\": \"string\", \"value\": \"string\"}"
+POST https://crypto.ivo2u.org/crypto/bifid/encrypt
+accept: application/json
+Content-Type: application/json
+
+{ "key": "string", "value": "string"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/bifid/decrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"key\": \"string\", \"value\": \"string\"}"
+POST https://crypto.ivo2u.org/crypto/bifid/decrypt
+accept: application/json
+Content-Type: application/json
+
+{ "key": "string", "value": "string"}
+
+###
+# curl -X POST "https://crypto.ivo2u.org/crypto/baudot/encrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"IVO\"}"
+POST https://crypto.ivo2u.org/crypto/baudot/encrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "fiets"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/baudot/decrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"01000 10000 01010\"}"
+POST https://crypto.ivo2u.org/crypto/baudot/decrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "01000 10000 01010"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/numbers/encrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"PUMEGENMB\"}"
+POST https://crypto.ivo2u.org/crypto/numbers/encrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "PUMEGENMB"}
+
+###
+
+# curl -X POST "https://crypto.ivo2u.org/crypto/numbers/decrypt" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"value\": \"325271\"}"
+POST https://crypto.ivo2u.org/crypto/numbers/decrypt
+accept: application/json
+Content-Type: application/json
+
+{ "value": "325271"}

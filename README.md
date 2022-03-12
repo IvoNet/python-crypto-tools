@@ -10,6 +10,16 @@ But it also demonstrates many of the old cryptographic formulae.
 * Docker
 * Python 3.8+
 
+# Create Python virtual environment
+
+from the project root:
+
+```shell
+python3 -m venv venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+```
+
 # Build
 
 `make` is used to build the docker images. 

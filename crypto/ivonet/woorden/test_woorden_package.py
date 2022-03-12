@@ -3,6 +3,7 @@ from unittest import TestCase, main
 
 from ivonet.woorden.DictionaryRegexer import DictionaryRegexer
 from ivonet.woorden.analyse_sentence import StringWordAnalyser
+from ivonet.woorden.subtract import word_minus_word
 from ivonet.woorden.woordenboek import Woordenboek
 
 
@@ -122,6 +123,21 @@ class StringWordAnalyserTest(TestCase):
         self.assertFalse(a.all_words("ACHTWANARAMVNRATECCTIRASNENSUVOLLAITEEAS"))
         self.assertFalse(a.all_words("ACHTWANARAMVNRATECCTIRASNENSUVOLLWERELD"))
         self.assertFalse(a.all_words("nn"))
+
+
+class SubractWordTest(TestCase):
+    def test_valid(self):
+        self.assertEqual("-J * D -H -T", word_minus_word("DAG", "NACHT"))
+        self.assertEqual("E -J E E * *", word_minus_word("PEPPIE", "KOKKIE"))
+        self.assertEqual("-K -C -N B * * * *", word_minus_word("ELEKTRON", "POSITRON"))
+        self.assertEqual("G F -K Z E L", word_minus_word("WOEZEL", "PIP"))
+        self.assertEqual("* -K * D -O Q -T -R -A", word_minus_word("CAESAR", "CLEOPATRA"))
+        self.assertEqual("* C G M B -K A D", word_minus_word("TRINIDAD", "TOBAGO"))
+        self.assertEqual("A -T -A -M R", word_minus_word("WATER", "VUUR"))
+        self.assertEqual("D", word_minus_word("e", "a"))
+
+    def test_invalid(self):
+        self.assertNotEqual("-J * D -H -T", word_minus_word("NACHT", "DAG"))
 
 
 if __name__ == '__main__':

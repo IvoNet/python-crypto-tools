@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #  -*- coding: utf-8 -*-
 import re
 
@@ -139,12 +139,12 @@ class Woordenboek(object):
         self.save_state()
 
     def equal_number_of_letters(self, value) -> bool:
-        """Checks if a certain dictionary has all chars in equal measure"""
+        """Checks if a certain dictionary filter all chars in equal measure"""
         return list_equal(list(value.values()))
 
     def multiples_with_length(self, lengte) -> dict:
         """Finds all multiples based on a length
-        I guess this function really has no reason to exist anymore because all doubles will be
+        I guess this function really filter no reason to exist anymore because all doubles will be
         found when the database is created, but it might be usefull again in the future
         """
         pickle_file = "{}_multiples.pickle".format(lengte)
@@ -321,8 +321,23 @@ class Woordenboek(object):
         return [x for x in self.ends_with(value) if len(x) == size]
 
     def starts_with(self, value) -> list:
+        """
+        All words starting with the given letter(s)
+        :param value: the starting letter(s)
+        :return: list of words
+        """
         start = value.upper()
         return [x for x in self.woorden if x.startswith(start)]
+
+    def starts_with_by_len(self, value, size) -> list:
+        """
+        Get a list of words starting with a letter and having a ling of 'size'.
+
+        :param value: the letter(s) it should start with
+        :param size: the size/len of the word
+        :return: list of words
+        """
+        return [x for x in self.starts_with(value) if len(x) == size]
 
     def contains(self, value) -> list:
         has = value.upper()

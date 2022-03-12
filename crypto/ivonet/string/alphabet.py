@@ -54,6 +54,31 @@ def base_26_encode_string(word):
         num = num + loc * 26 ** i
     return num
 
+def base_26_decode_string(number):
+    """decodes back the base_26_encode_string function
+
+    it can only handle to 26**500
+    """
+    factor = 0
+    for i in range(500):
+        a = 26 ** i
+        if a > number:
+            factor = i - 1
+            break
+    if factor < 0:
+        return alphabet_idx(number).upper()
+    ret = ""
+    wip = number
+    for i in range(factor, 0, -1):
+        number_factor = wip // 26 ** i
+        wip -= number_factor * 26 ** i
+        ret += alphabet_idx(number_factor)
+        if i == 1:
+            ret += alphabet_idx(wip)
+
+    return ret.upper()
+
+
 
 def is_klinker(letter):
     """True if a klinker"""

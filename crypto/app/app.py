@@ -17,6 +17,9 @@ from ivonet.crypto.caesar import rot
 from ivonet.crypto.morsecode import text_2_morse, morse_2_text
 from ivonet.crypto.number_substitution import text_to_numbers, numbers_to_text
 from ivonet.crypto.sms import Sms
+from ivonet.math.hexadecimal import number_as_word
+from ivonet.math.roman_numerals import ToRoman, roman
+from ivonet.string.alphabet import base_26_encode_string
 from ivonet.woorden import Woordenboek
 
 app = Flask(__name__)
@@ -233,6 +236,56 @@ class SmsDecrypt(Resource):
             return {'result': self.sms.sms_2_txt(get_value()).strip()}, 200
         except KeyError:
             abort(HTTPStatus.BAD_REQUEST, "The provided value should be a sms sequence or it can not be decrypted.")
+
+@ns.route('/base/26/encode')
+class Base26Encode(Resource):
+    @ns.doc("""Encodes a string to a base 26 encoded string. A = 0, B = 1, Z = 25, BA = 26, BB = 27, XYZ = 16197""")
+    @ns.expect(value)
+    def post(self):
+        try:
+            return {'result': base_26_encode_string(get_value())}, 200
+        except KeyError:
+            abort(HTTPStatus.BAD_REQUEST, "The provided value should be a text.")
+
+@ns.route('/base/26/decode')
+class Base26Decode(Resource):
+    @ns.doc("""Decodes a string from a base 26 encoded number.""")
+    @ns.expect(value)
+    def post(self):
+        try:
+            return {'result': base_26_encode_string(get_value())}, 200
+        except KeyError:
+            abort(HTTPStatus.BAD_REQUEST, "The provided value should be a base 26 encoded string.")
+
+@ns.route('/hexadecimal/word')
+class HexadecimalAsWord(Resource):
+    @ns.doc("""Transforms a number into a hexadecimal notation and transforms the digits to 'corresponding' letters.""")
+    @ns.expect(value)
+    def post(self):
+        try:
+            return {'result': number_as_word(get_value())}, 200
+        except KeyError:
+            abort(HTTPStatus.BAD_REQUEST, "The provided value should be a number.")
+
+@ns.route('/numerals/roman')
+class RomanNumerals(Resource):
+    @ns.doc("""Transforms a number to a roman numeral or to a number if already a roman numeral.""")
+    @ns.expect(value)
+    def post(self):
+        try:
+            return {'result': roman(get_value())}, 200
+        except KeyError:
+            abort(HTTPStatus.BAD_REQUEST, "The provided value should be a number between 0 and 3999 or a roman numeral")
+
+@ns.route('/numerals/roman')
+class RomanNumerals(Resource):
+    @ns.doc("""Transforms a number to a roman numeral or to a number if already a roman numeral.""")
+    @ns.expect(value)
+    def post(self):
+        try:
+            return {'result': roman(get_value())}, 200
+        except KeyError:
+            abort(HTTPStatus.BAD_REQUEST, "The provided value should be a number between 0 and 3999 or a roman numeral")
 
 
 if __name__ == '__main__':

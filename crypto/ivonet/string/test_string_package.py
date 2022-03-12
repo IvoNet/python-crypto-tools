@@ -4,7 +4,7 @@ from unittest import TestCase, main
 
 from ivonet.string import substring_after_character, alphabet
 from ivonet.string.alphabet import base_26_encode_string, sum_letter_values_of_word, product_letter_values_of_word, \
-    alphabet
+    alphabet, base_26_decode_string
 from ivonet.string.string_functions import sort_alphabetical, is_sorted, letters, letters_is_word, word_frequency_counter
 
 
@@ -53,6 +53,17 @@ class TestAlphabet(TestCase):
             20569858802338608448364049446852061780140090404415032130205785332253615286792604334631099850853638206681253072973938092469074262459481025482721597642516904700401181296799991465053389302729514,
             base_26_encode_string(
                 "FCJNIPMLEEUHUATKMSOZUTXLEZBBFTLKYHXLLORKXQDDIFJCDCZGJWANKVALRMVNZSDRRHDXEICQVBSLUKKLYVEWGGFOKUHEBPHIHLIJPXTQEOANYBDOIWPLKRLVNXTKVGBCDSK"))
+
+
+    def test_base_26_decoded(self):
+        self.assertEqual("A", base_26_decode_string(0))
+        self.assertEqual("PUMEGENMB", base_26_decode_string(3296799508237))
+        self.assertEqual(9849791328331451697274678861440325, base_26_encode_string(alphabet()))
+        self.assertEqual(
+            "FCJNIPMLEEUHUATKMSOZUTXLEZBBFTLKYHXLLORKXQDDIFJCDCZGJWANKVALRMVNZSDRRHDXEICQVBSLUKKLYVEWGGFOKUHEBPHIHLIJPXTQEOANYBDOIWPLKRLVNXTKVGBCDSK",
+            base_26_decode_string(
+                20569858802338608448364049446852061780140090404415032130205785332253615286792604334631099850853638206681253072973938092469074262459481025482721597642516904700401181296799991465053389302729514
+                ))
 
     def test_sum_letter_values_of_word(self):
         self.assertEqual(3, sum_letter_values_of_word("aaa"))
