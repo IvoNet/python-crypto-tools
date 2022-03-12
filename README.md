@@ -16,9 +16,13 @@ from the project root:
 
 ```shell
 python3 -m venv venv
-source ./venv/bin/activate
+source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+Make sure to always activate the virtual env with 
+`source venv/bin/activate` before using the command line in the project
+
 
 # Build
 
