@@ -54,7 +54,7 @@ Follow the instructions given by `make`.
 # Run
 
 ```bash
-docker run -d --rm -p 5000:5000 ivonet/crypto
+docker run -d --rm -p 8080:8080 ivonet/crypto
 ```
 
 or run:
@@ -76,4 +76,4 @@ pip3 install -r ./crypto-base/requirements.txt
 # Swagger
 
 You can see all the endpoints by running the application and going to 
-the [swagger](http://localhost:5000) page.
+the [swagger](http://localhost:8080) page.

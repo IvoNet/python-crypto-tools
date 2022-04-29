@@ -7,5 +7,5 @@ COPY ivonet /usr/local/lib/python3.9/site-packages/ivonet
 
 WORKDIR /opt/app
 
-EXPOSE 5000
-CMD ["python3", "app.py", "--bind", "0.0.0.0", "--port", "5000"]
+EXPOSE 8080
+CMD ["python3", "app.py", "--bind", "0.0.0.0", "--port", "8080"]

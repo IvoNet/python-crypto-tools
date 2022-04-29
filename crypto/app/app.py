@@ -18,7 +18,7 @@ from ivonet.crypto.morsecode import text_2_morse, morse_2_text
 from ivonet.crypto.number_substitution import text_to_numbers, numbers_to_text
 from ivonet.crypto.sms import Sms
 from ivonet.math.hexadecimal import number_as_word
-from ivonet.math.roman_numerals import ToRoman, roman
+from ivonet.math.roman_numerals import roman
 from ivonet.string.alphabet import base_26_encode_string
 from ivonet.woorden import Woordenboek
 
@@ -292,10 +292,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser("python3 app.py")
     parser.add_argument('-b', '--bind', required=False, default="127.0.0.1",
                         help="IP to bind to e.g. 0.0.0.0. (default 127.0.0.1)")
-    parser.add_argument('-p', '--port', required=False, default="5000",
-                        help="Port to run on. (default 5000)")
+    parser.add_argument('-p', '--port', required=False, default="8080",
+                        help="Port to run on. (default 8080)")
     args = parser.parse_args()
-    if os.environ["DEBUG"] == "1":
-        app.run(host=args.bind, debug=True)
+    if os.getenv("DEBUG") == "1":
+        app.run(host=args.bind, port=args.port, debug=True)
     else:
         serve(app, host=args.bind, port=args.port)
