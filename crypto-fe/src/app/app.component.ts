@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.get<ServicesResult>("http://localhost:5000/crypto/services", httpOptions)
+    return this.http.get<ServicesResult>('http://localhost:8080/crypto/services', httpOptions);
 
   }
 

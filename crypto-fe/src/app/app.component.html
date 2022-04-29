@@ -2,7 +2,7 @@ hello word:
 
 
 <div *ngIf="services !== undefined" >
-  <ul *ngFor="let service of services.result ">
+  <ul *ngFor="let service of services">
     <li>
       <h1>{{ service.endpoint }}</h1>
       <div [innerHTML]="service.description"></div>
